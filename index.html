@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ChiChi Burger — mazali burgerlar, tez yetkazish. Onlayn buyurtma bering!">
+<meta name="theme-color" content="#08080c">
+<title>ChiChi Burger — Mazali Burgerlar</title>
+<script>
+  // Prevent flash of wrong theme/lang
+  document.documentElement.setAttribute('data-theme', localStorage.getItem('chichi_theme') || 'dark');
+  document.documentElement.lang = localStorage.getItem('chichi_lang') || 'uz';
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home">
+
+<div id="app-header"></div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span data-i18n="hero_badge">Yetkazib berish 30 daqiqada</span>
+        </div>
+        <h1>
+          <span data-i18n="hero_title1">Mazali</span><br>
+          <span class="gradient" data-i18n="hero_title2">Burgerlar</span><br>
+          <span data-i18n="hero_title3">Siz uchun!</span>
+        </h1>
+        <p data-i18n="hero_desc">Yangi go'sht, issiq non va maxsus souslar bilan tayyorlangan haqiqiy ta'm. Hoziroq buyurtma bering!</p>
+        <div class="hero-cta">
+          <a href="menu.html" class="btn btn-primary">
+            <span data-i18n="hero_cta1">Buyurtma berish</span>
+            <span>→</span>
+          </a>
+          <a href="menu.html" class="btn btn-secondary" data-i18n="hero_cta2">Menyuni ko'rish</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="burger-glow"></div>
+        <div class="burger-main">🍔</div>
+        <div class="orbit o1">🍟</div>
+        <div class="orbit o2">🥤</div>
+        <div class="orbit o3">🍗</div>
+        <div class="orbit o4">🧀</div>
+        <div class="hero-tag t1">
+          <span class="emoji">⚡</span>
+          <span data-i18n="tag_fast">Tez yetkazish</span>
+        </div>
+        <div class="hero-tag t2">
+          <span class="emoji">🔥</span>
+          <span data-i18n="tag_fresh">100% Yangi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="features-grid reveal">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3 data-i18n="f1_t">Tez yetkazish</h3>
+        <p data-i18n="f1_d">30 daqiqada eshigingizgacha</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🥇</div>
+        <h3 data-i18n="f2_t">Sifatli mahsulot</h3>
+        <p data-i18n="f2_d">Faqat yangi masalliqlar</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">👨‍🍳</div>
+        <h3 data-i18n="f3_t">Ustalar tayyorlaydi</h3>
+        <p data-i18n="f3_d">Tajribali oshpazlar</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💳</div>
+        <h3 data-i18n="f4_t">Qulay to'lov</h3>
+        <p data-i18n="f4_d">Naqd yoki karta orqali</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow" data-i18n="featured_eyebrow">Tanlangan</span>
+      <h2 data-i18n="featured_title">Mashhur taomlar</h2>
+      <p data-i18n="featured_desc">Mijozlarimiz eng ko'p buyurtma qiladigan taomlar</p>
+    </div>
+    <div class="products-grid" id="homeFeatured"></div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="menu.html" class="btn btn-primary" data-i18n="goto_menu">Menyuga o'tish</a>
+    </div>
+  </div>
+</section>
+
+<div id="app-footer"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

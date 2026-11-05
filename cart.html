@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savat — ChiChi Burger</title>
+<script>document.documentElement.setAttribute('data-theme',localStorage.getItem('chichi_theme')||'dark');document.documentElement.lang=localStorage.getItem('chichi_lang')||'uz';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="cart">
+
+<div id="app-header"></div>
+
+<section class="section" style="padding-top:120px">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow" data-i18n="cart_title">Savat</span>
+      <h2 data-i18n="cart_items_title">Savatdagi mahsulotlar</h2>
+    </div>
+
+    <div id="cartEmpty" style="display:none">
+      <div class="empty-state">
+        <div class="empty-emoji">🛒</div>
+        <h3 data-i18n="cart_empty_t">Savat bo'sh</h3>
+        <p data-i18n="cart_empty_d">Menyudan mazali taom tanlang</p>
+        <a href="menu.html" class="btn btn-primary" data-i18n="goto_menu">Menyuga o'tish</a>
+      </div>
+    </div>
+
+    <div id="cartContent" style="display:none">
+      <div class="cart-layout">
+        <div>
+          <div class="cart-items-list" id="cartItemsList"></div>
+          <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+            <a href="menu.html" class="btn btn-secondary btn-sm" data-i18n="cart_continue">Xaridni davom ettirish</a>
+            <button class="btn btn-danger btn-sm" id="clearCartBtn" type="button" data-i18n="cart_clear">Savatni tozalash</button>
+          </div>
+        </div>
+
+        <aside class="cart-sidebar">
+          <h3>📝 <span data-i18n="checkout_title">Buyurtma berish</span></h3>
+
+          <div class="delivery-toggle">
+            <button type="button" class="active" data-type="delivery" data-i18n="type_delivery">Yetkazib berish</button>
+            <button type="button" data-type="pickup" data-i18n="type_pickup">Olib ketish</button>
+          </div>
+
+          <form id="orderForm" novalidate>
+            <div class="form-group" id="fg-name">
+              <label data-i18n="form_name">Ismingiz *</label>
+              <input type="text" class="input" id="inpName">
+              <div class="form-error" data-i18n="err_required">To'ldiring</div>
+            </div>
+            <div class="form-group" id="fg-phone">
+              <label data-i18n="form_phone">Telefon raqam *</label>
+              <input type="tel" class="input" id="inpPhone" placeholder="+998 90 123 45 67">
+              <div class="form-error" data-i18n="err_phone">Noto'g'ri raqam</div>
+            </div>
+
+            <div id="savedAddressesWrap" style="display:none;margin-bottom:10px">
+              <div style="font-size:.78rem;color:var(--muted);margin-bottom:6px" data-i18n="saved_addresses">Saqlangan manzillar:</div>
+              <div class="saved-addresses" id="savedAddresses"></div>
+            </div>
+
+            <div class="form-group" id="fg-address">
+              <label data-i18n="form_address">Manzil *</label>
+              <input type="text" class="input" id="inpAddress">
+              <div class="form-error" data-i18n="err_required">To'ldiring</div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_comment">Izoh (ixtiyoriy)</label>
+              <textarea class="textarea" id="inpComment" rows="2"></textarea>
+            </div>
+
+            <div style="margin-bottom:16px;padding-top:16px;border-top:1px dashed var(--border-2)">
+              <div class="summary-row"><span data-i18n="sum_products">Mahsulotlar</span><span id="sumSubtotal">0</span></div>
+              <div class="summary-row" id="deliveryRow"><span data-i18n="sum_delivery">Yetkazish</span><span id="sumDelivery">0</span></div>
+              <div class="summary-row total"><span data-i18n="sum_total">Jami</span><span id="sumTotal">0</span></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <span data-i18n="form_submit">Buyurtmani yuborish</span>
+            </button>
+          </form>
+        </aside>
+      </div>
+    </div>
+
+    <div id="orderSuccess" style="display:none"></div>
+  </div>
+</section>
+
+<div id="app-footer"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

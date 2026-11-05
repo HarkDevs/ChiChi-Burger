@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biz haqimizda — ChiChi Burger</title>
+<script>document.documentElement.setAttribute('data-theme',localStorage.getItem('chichi_theme')||'dark');document.documentElement.lang=localStorage.getItem('chichi_lang')||'uz';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="about">
+
+<div id="app-header"></div>
+
+<section class="section" style="padding-top:120px">
+  <div class="container">
+    <div class="about-card reveal">
+      <div>
+        <span class="section-eyebrow" data-i18n="about_eyebrow">Nega biz?</span>
+        <h2 data-i18n="about_title">ChiChi Burger — mazali ta'm, sifatli xizmat</h2>
+        <p data-i18n="about_desc">Biz har bir burgerni yangi go'shtdan, yangi sabzavotlardan va o'zimizning maxsus souslardan tayyorlaymiz. Mijozlarimizning roziligi — bizning eng katta yutug'imiz.</p>
+        <ul class="about-list">
+          <li><span class="check">✓</span> <span data-i18n="about_li1">Har kuni yangi masalliqlar</span></li>
+          <li><span class="check">✓</span> <span data-i18n="about_li2">Tez va sifatli yetkazib berish</span></li>
+          <li><span class="check">✓</span> <span data-i18n="about_li3">Qulay narxlar va aksiyalar</span></li>
+          <li><span class="check">✓</span> <span data-i18n="about_li4">Halol va sifatli mahsulotlar</span></li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="big-emoji">🍔</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow" data-i18n="contact_eyebrow">Aloqa</span>
+      <h2 data-i18n="contact_title">Biz bilan bog'laning</h2>
+    </div>
+    <div class="contact-grid reveal" id="contactInfo">
+      <div class="contact-card">
+        <div class="contact-icon">🕐</div>
+        <h3 data-i18n="contact_hours_t">Ish vaqti</h3>
+        <p data-i18n="contact_hours_d">Har kuni 10:00 — 23:00</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3 data-i18n="contact_addr_t">Manzil</h3>
+        <p data-contact-address>Sebzor dahasi, 4</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3 data-i18n="contact_phone_t">Telefon</h3>
+        <p data-contact-phone>+998 94 921 65 10</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="app-footer"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menyu — ChiChi Burger</title>
+<script>document.documentElement.setAttribute('data-theme',localStorage.getItem('chichi_theme')||'dark');document.documentElement.lang=localStorage.getItem('chichi_lang')||'uz';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="menu">
+
+<div id="app-header"></div>
+
+<section class="section" style="padding-top:120px">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow" data-i18n="menu_eyebrow">Bizning menyu</span>
+      <h2 data-i18n="menu_title">To'liq menyu</h2>
+      <p data-i18n="menu_desc">Har bir luqmada mehr bilan tayyorlangan taomlar</p>
+    </div>
+    <div class="cats" id="menuCats"></div>
+    <div class="products-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<div id="app-footer"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
