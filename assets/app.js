@@ -261,46 +261,106 @@ const T = {
   }
 };
 
-/* =====================================================================
-   🍔  PRODUCTS (28 items)
-   ===================================================================== */
+/* ---------- PRODUCTS (rasmlar bilan) ---------- */
 const PRODUCTS = [
-  // Burgers (9)
-  {id:'classic',price:35000,emoji:'🍔',cat:'burgers',badge:'hit',name:'ChiChi Classic',desc:{uz:'Klassik mol go\'shtli burger, yangi sabzavotlar',ru:'Классический бургер с говядиной и овощами',en:'Classic beef burger with fresh veggies'}},
-  {id:'cheese',price:42000,emoji:'🧀',cat:'burgers',name:{uz:'Chizburger',ru:'Чизбургер',en:'Cheeseburger'},desc:{uz:'Eritilgan pishloqli mazali burger',ru:'Вкусный бургер с плавленым сыром',en:'Tasty burger with melted cheese'}},
-  {id:'double',price:55000,emoji:'🍔',cat:'burgers',badge:'hit',name:'Double Smash',desc:{uz:'Ikki qavat go\'sht, ikki barobar lazzat',ru:'Двойная котлета — двойное удовольствие',en:'Double patty — double pleasure'}},
-  {id:'chicken',price:38000,emoji:'🍗',cat:'burgers',name:{uz:'Tovuqli burger',ru:'Чикен Бургер',en:'Chicken Burger'},desc:{uz:'Yumshoq tovuq go\'shti bilan',ru:'С нежным куриным мясом',en:'With tender chicken'}},
-  {id:'spicy',price:40000,emoji:'🌶️',cat:'burgers',badge:'new',name:{uz:'Achchiq burger',ru:'Spicy Burger',en:'Spicy Burger'},desc:{uz:'Achchiq sevuvchilar uchun maxsus',ru:'Специально для любителей острого',en:'Specially for spicy lovers'}},
-  {id:'bbq',price:45000,emoji:'🍖',cat:'burgers',name:{uz:'BBQ Burger',ru:'BBQ Бургер',en:'BBQ Burger'},desc:{uz:'BBQ sousli, dudlangan ta\'m',ru:'С соусом BBQ и копчёным вкусом',en:'With BBQ sauce and smoky flavor'}},
-  {id:'mushroom',price:48000,emoji:'🍄',cat:'burgers',name:{uz:'Qo\'ziqorinli burger',ru:'Бургер с грибами',en:'Mushroom Burger'},desc:{uz:'Shveytsar pishloq va qo\'ziqorin bilan',ru:'Со швейцарским сыром и грибами',en:'With Swiss cheese and mushrooms'}},
-  {id:'bacon',price:50000,emoji:'🥓',cat:'burgers',name:{uz:'Bekonli burger',ru:'Бургер с беконом',en:'Bacon Burger'},desc:{uz:'Qarsildoq bekon va kotletlar',ru:'Хрустящий бекон и котлеты',en:'Crispy bacon and patties'}},
-  {id:'veggie',price:36000,emoji:'🥬',cat:'burgers',badge:'new',name:{uz:'Vegetarian burger',ru:'Вегетарианский бургер',en:'Veggie Burger'},desc:{uz:'Sabzavotli kotlet bilan',ru:'С овощной котлетой',en:'With vegetable patty'}},
-  // Sides (5)
-  {id:'fries',price:18000,emoji:'🍟',cat:'sides',name:{uz:'Fri kartoshka',ru:'Картофель фри',en:'Fries'},desc:{uz:'Tiniq qovurilgan kartoshka',ru:'Хрустящий картофель',en:'Crispy fried potatoes'}},
-  {id:'cheese_fries',price:25000,emoji:'🧀',cat:'sides',name:{uz:'Pishloqli fri',ru:'Картофель с сыром',en:'Cheesy Fries'},desc:{uz:'Eritilgan pishloq bilan',ru:'С плавленым сыром',en:'With melted cheese'}},
-  {id:'onion_rings',price:22000,emoji:'🧅',cat:'sides',name:{uz:'Piyoz halqalari',ru:'Луковые кольца',en:'Onion Rings'},desc:{uz:'Tiniq qovurilgan piyoz',ru:'Хрустящие луковые кольца',en:'Crispy fried onion rings'}},
-  {id:'nuggets',price:24000,emoji:'🍗',cat:'sides',name:{uz:'Tovuq nagetslari',ru:'Куриные наггетсы',en:'Chicken Nuggets'},desc:{uz:'8 dona, sous bilan',ru:'8 шт, с соусом',en:'8 pcs, with sauce'}},
-  {id:'wings',price:35000,emoji:'🔥',cat:'sides',name:{uz:'Bufallo qanotchalari',ru:'Крылышки Баффало',en:'Buffalo Wings'},desc:{uz:'Achchiq sousli qanotchalar',ru:'Крылышки в остром соусе',en:'Spicy buffalo wings'}},
-  // Drinks (6)
-  {id:'cola',price:12000,emoji:'🥤',cat:'drinks',name:'Coca-Cola',desc:{uz:'Sovuq gazlangan ichimlik 0.5L',ru:'Холодный газированный напиток 0.5л',en:'Cold soft drink 0.5L'}},
-  {id:'fanta',price:12000,emoji:'🍊',cat:'drinks',name:'Fanta',desc:{uz:'Apelsinli gazli ichimlik 0.5L',ru:'Апельсиновый напиток 0.5л',en:'Orange soda 0.5L'}},
-  {id:'sprite',price:12000,emoji:'🥤',cat:'drinks',name:'Sprite',desc:{uz:'Limonli gazli ichimlik 0.5L',ru:'Лимонный напиток 0.5л',en:'Lemon soda 0.5L'}},
-  {id:'shake',price:22000,emoji:'🥛',cat:'drinks',name:{uz:'Milkshake',ru:'Милкшейк',en:'Milkshake'},desc:{uz:'Yumshoq va shirin sut kokteyli',ru:'Нежный и сладкий молочный коктейль',en:'Smooth and sweet milkshake'}},
-  {id:'lemonade',price:15000,emoji:'🍋',cat:'drinks',badge:'new',name:{uz:'Limonad',ru:'Лимонад',en:'Lemonade'},desc:{uz:'Uy sharoitida tayyorlangan',ru:'Домашний лимонад',en:'Homemade lemonade'}},
-  {id:'coffee',price:18000,emoji:'☕',cat:'drinks',name:{uz:'Kofe',ru:'Кофе',en:'Coffee'},desc:{uz:'Issiq Americano',ru:'Горячий Американо',en:'Hot Americano'}},
-  // Combos (4)
-  {id:'combo_classic',price:65000,emoji:'🍱',cat:'combos',badge:'hit',name:{uz:'Kombo Classic',ru:'Комбо Classic',en:'Combo Classic'},desc:{uz:'Burger + Fri + Ichimlik',ru:'Бургер + Фри + Напиток',en:'Burger + Fries + Drink'}},
-  {id:'combo_double',price:85000,emoji:'🍱',cat:'combos',name:{uz:'Kombo Double',ru:'Комбо Double',en:'Combo Double'},desc:{uz:'Double burger + Fri + Ichimlik',ru:'Дабл бургер + Фри + Напиток',en:'Double burger + Fries + Drink'}},
-  {id:'combo_family',price:150000,emoji:'🍱',cat:'combos',name:{uz:'Oilaviy kombo',ru:'Семейное комбо',en:'Family Combo'},desc:{uz:'4 burger + 2 fri + 4 ichimlik',ru:'4 бургера + 2 фри + 4 напитка',en:'4 burgers + 2 fries + 4 drinks'}},
-  {id:'combo_kids',price:45000,emoji:'🍱',cat:'combos',badge:'new',name:{uz:'Bolalar kombosi',ru:'Детское комбо',en:'Kids Combo'},desc:{uz:'Kichik burger + Fri + Sharbat',ru:'Мини бургер + Фри + Сок',en:'Mini burger + Fries + Juice'}},
-  // Desserts (4)
-  {id:'ice_cream',price:15000,emoji:'🍦',cat:'desserts',name:{uz:'Muzqaymoq',ru:'Мороженое',en:'Ice Cream'},desc:{uz:'Vanil, shokolad, qulupnay',ru:'Ваниль, шоколад, клубника',en:'Vanilla, chocolate, strawberry'}},
-  {id:'brownie',price:20000,emoji:'🍫',cat:'desserts',name:{uz:'Brauni',ru:'Брауни',en:'Brownie'},desc:{uz:'Shokoladli yumshoq kek',ru:'Мягкий шоколадный пирог',en:'Soft chocolate cake'}},
-  {id:'donut',price:12000,emoji:'🍩',cat:'desserts',badge:'new',name:{uz:'Donut',ru:'Пончик',en:'Donut'},desc:{uz:'Shakar kukunli donut',ru:'Пончик в сахарной пудре',en:'Donut with powdered sugar'}},
-  {id:'cheesecake',price:25000,emoji:'🍰',cat:'desserts',name:{uz:'Chizkeyk',ru:'Чизкейк',en:'Cheesecake'},desc:{uz:'New York uslubidagi',ru:'В стиле Нью-Йорк',en:'New York style'}},
+  // Burgers
+  {id:'classic', price:35000, emoji:'🍔', cat:'burgers', badge:'hit', name:{uz:'ChiChi Classic',ru:'ChiChi Classic',en:'ChiChi Classic'}, desc:{uz:"Klassik mol go'shtli burger, yangi sabzavotlar",ru:'Классический бургер с говядиной и овощами',en:'Classic beef burger with fresh veggies'}, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop'}, // Classic burger
+  {id:'cheese', price:42000, emoji:'🧀', cat:'burgers', name:{uz:'Chizburger',ru:'Чизбургер',en:'Cheeseburger'}, desc:{uz:'Eritilgan pishloqli mazali burger',ru:'Вкусный бургер с плавленым сыром',en:'Tasty burger with melted cheese'}, image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop'}, // Cheeseburger
+  {id:'double', price:55000, emoji:'🍔', cat:'burgers', badge:'hit', name:{uz:'Double Smash',ru:'Double Smash',en:'Double Smash'}, desc:{uz:"Ikki qavat go'sht, ikki barobar lazzat",ru:'Двойная котлета — двойное удовольствие',en:'Double patty — double pleasure'}, image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop'}, // Double smash burger
+  {id:'chicken', price:38000, emoji:'🍗', cat:'burgers', name:{uz:'Tovuqli burger',ru:'Чикен Бургер',en:'Chicken Burger'}, desc:{uz:"Yumshoq tovuq go'shti bilan",ru:'С нежным куриным мясом',en:'With tender chicken'}, image: 'https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&h=400&fit=crop'}, // Chicken burger
+  {id:'spicy', price:40000, emoji:'🌶️', cat:'burgers', badge:'new', name:{uz:'Achchiq burger',ru:'Spicy Burger',en:'Spicy Burger'}, desc:{uz:'Achchiq sevuvchilar uchun maxsus',ru:'Специально для любителей острого',en:'Specially for spicy lovers'}, image: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&h=400&fit=crop'}, // Spicy burger
+  {id:'bbq', price:45000, emoji:'🍖', cat:'burgers', name:{uz:'BBQ Burger',ru:'BBQ Бургер',en:'BBQ Burger'}, desc:{uz:"BBQ sousli, dudlangan ta'm",ru:'С соусом BBQ и копчёным вкусом',en:'With BBQ sauce and smoky flavor'}, image: 'https://images.unsplash.com/photo-1550317138-10000687a72b?w=600&h=400&fit=crop'}, // BBQ burger
+  {id:'mushroom', price:48000, emoji:'🍄', cat:'burgers', name:{uz:"Qo'ziqorinli burger",ru:'Бургер с грибами',en:'Mushroom Burger'}, desc:{uz:"Shveytsar pishloq va qo'ziqorin bilan",ru:'Со швейцарским сыром и грибами',en:'With Swiss cheese and mushrooms'}, image: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&h=400&fit=crop'}, // Mushroom burger
+  {id:'bacon', price:50000, emoji:'🥓', cat:'burgers', name:{uz:'Bekonli burger',ru:'Бургер с беконом',en:'Bacon Burger'}, desc:{uz:'Qarsildoq bekon va kotletlar',ru:'Хрустящий бекон и котлеты',en:'Crispy bacon and patties'}, image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop'}, // Bacon burger
+  {id:'veggie', price:36000, emoji:'🥬', cat:'burgers', badge:'new', name:{uz:'Vegetarian burger',ru:'Вегетарианский бургер',en:'Veggie Burger'}, desc:{uz:'Sabzavotli kotlet bilan',ru:'С овощной котлетой',en:'With vegetable patty'}, image: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&h=400&fit=crop'}, // Veggie burger
+  
+  // Sides
+  {id:'fries', price:18000, emoji:'🍟', cat:'sides', name:{uz:'Fri kartoshka',ru:'Картофель фри',en:'Fries'}, desc:{uz:'Tiniq qovurilgan kartoshka',ru:'Хрустящий картофель',en:'Crispy fried potatoes'}, image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&h=400&fit=crop'}, // French fries
+  {id:'cheese_fries', price:25000, emoji:'🧀', cat:'sides', name:{uz:'Pishloqli fri',ru:'Картофель с сыром',en:'Cheesy Fries'}, desc:{uz:'Eritilgan pishloq bilan',ru:'С плавленым сыром',en:'With melted cheese'}, image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=600&h=400&fit=crop'}, // Cheese fries
+  {id:'onion_rings', price:22000, emoji:'🧅', cat:'sides', name:{uz:'Piyoz halqalari',ru:'Луковые кольца',en:'Onion Rings'}, desc:{uz:'Tiniq qovurilgan piyoz',ru:'Хрустящие луковые кольца',en:'Crispy fried onion rings'}, image: 'https://images.unsplash.com/photo-1639024471283-03518883512d?w=600&h=400&fit=crop'}, // Onion rings
+  {id:'nuggets', price:24000, emoji:'🍗', cat:'sides', name:{uz:'Tovuq nagetslari',ru:'Куриные наггетсы',en:'Chicken Nuggets'}, desc:{uz:'8 dona, sous bilan',ru:'8 шт, с соусом',en:'8 pcs, with sauce'}, image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=600&h=400&fit=crop'}, // Chicken nuggets
+  {id:'wings', price:35000, emoji:'🔥', cat:'sides', name:{uz:'Bufallo qanotchalari',ru:'Крылышки Баффало',en:'Buffalo Wings'}, desc:{uz:'Achchiq sousli qanotchalar',ru:'Крылышки в остром соусе',en:'Spicy buffalo wings'}, image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600&h=400&fit=crop'}, // Buffalo wings
+  
+  // Drinks
+  {id:'cola', price:12000, emoji:'🥤', cat:'drinks', name:{uz:'Coca-Cola',ru:'Coca-Cola',en:'Coca-Cola'}, desc:{uz:'Sovuq gazlangan ichimlik 0.5L',ru:'Холодный газированный напиток 0.5л',en:'Cold soft drink 0.5L'}, image: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop'}, // Cola
+  {id:'fanta', price:12000, emoji:'🍊', cat:'drinks', name:{uz:'Fanta',ru:'Fanta',en:'Fanta'}, desc:{uz:'Apelsinli gazli ichimlik 0.5L',ru:'Апельсиновый напиток 0.5л',en:'Orange soda 0.5L'}, image: 'https://images.unsplash.com/photo-1624517452488-04869289c4ca?w=600&h=400&fit=crop'}, // Orange soda
+  {id:'sprite', price:12000, emoji:'🥤', cat:'drinks', name:{uz:'Sprite',ru:'Sprite',en:'Sprite'}, desc:{uz:'Limonli gazli ichimlik 0.5L',ru:'Лимонный напиток 0.5л',en:'Lemon soda 0.5L'}, image: 'https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?w=600&h=400&fit=crop'}, // Lemon soda
+  {id:'shake', price:22000, emoji:'🥛', cat:'drinks', name:{uz:'Milkshake',ru:'Милкшейк',en:'Milkshake'}, desc:{uz:'Yumshoq va shirin sut kokteyli',ru:'Нежный и сладкий молочный коктейль',en:'Smooth and sweet milkshake'}, image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&h=400&fit=crop'}, // Milkshake
+  {id:'lemonade', price:15000, emoji:'🍋', cat:'drinks', badge:'new', name:{uz:'Limonad',ru:'Лимонад',en:'Lemonade'}, desc:{uz:'Uy sharoitida tayyorlangan',ru:'Домашний лимонад',en:'Homemade lemonade'}, image: 'https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?w=600&h=400&fit=crop'}, // Lemonade
+  {id:'coffee', price:18000, emoji:'☕', cat:'drinks', name:{uz:'Kofe',ru:'Кофе',en:'Coffee'}, desc:{uz:'Issiq Americano',ru:'Горячий Американо',en:'Hot Americano'}, image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop'}, // Coffee
+  
+  // Combos
+  {id:'combo_classic', price:65000, emoji:'🍱', cat:'combos', badge:'hit', name:{uz:'Kombo Classic',ru:'Комбо Classic',en:'Combo Classic'}, desc:{uz:'Burger + Fri + Ichimlik',ru:'Бургер + Фри + Напиток',en:'Burger + Fries + Drink'}, image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=400&fit=crop'}, // Combo meal
+  {id:'combo_double', price:85000, emoji:'🍱', cat:'combos', name:{uz:'Kombo Double',ru:'Комбо Double',en:'Combo Double'}, desc:{uz:'Double burger + Fri + Ichimlik',ru:'Дабл бургер + Фри + Напиток',en:'Double burger + Fries + Drink'}, image: 'https://images.unsplash.com/photo-1610614819513-58e34989848b?w=600&h=400&fit=crop'}, // Double combo
+  {id:'combo_family', price:150000, emoji:'🍱', cat:'combos', name:{uz:'Oilaviy kombo',ru:'Семейное комбо',en:'Family Combo'}, desc:{uz:'4 burger + 2 fri + 4 ichimlik',ru:'4 бургера + 2 фри + 4 напитка',en:'4 burgers + 2 fries + 4 drinks'}, image: 'https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?w=600&h=400&fit=crop'}, // Family combo
+  {id:'combo_kids', price:45000, emoji:'🍱', cat:'combos', badge:'new', name:{uz:'Bolalar kombosi',ru:'Детское комбо',en:'Kids Combo'}, desc:{uz:'Kichik burger + Fri + Sharbat',ru:'Мини бургер + Фри + Сок',en:'Mini burger + Fries + Juice'}, image: 'https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=600&h=400&fit=crop'}, // Kids combo
+  
+  // Desserts
+  {id:'ice_cream', price:15000, emoji:'🍦', cat:'desserts', name:{uz:'Muzqaymoq',ru:'Мороженое',en:'Ice Cream'}, desc:{uz:'Vanil, shokolad, qulupnay',ru:'Ваниль, шоколад, клубника',en:'Vanilla, chocolate, strawberry'}, image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop'}, // Ice cream
+  {id:'brownie', price:20000, emoji:'🍫', cat:'desserts', name:{uz:'Brauni',ru:'Брауни',en:'Brownie'}, desc:{uz:'Shokoladli yumshoq kek',ru:'Мягкий шоколадный пирог',en:'Soft chocolate cake'}, image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&h=400&fit=crop'}, // Brownie
+  {id:'donut', price:12000, emoji:'🍩', cat:'desserts', badge:'new', name:{uz:'Donut',ru:'Пончик',en:'Donut'}, desc:{uz:'Shakar kukunli donut',ru:'Пончик в сахарной пудре',en:'Donut with powdered sugar'}, image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&h=400&fit=crop'}, // Donut
+  {id:'cheesecake', price:25000, emoji:'🍰', cat:'desserts', name:{uz:'Chizkeyk',ru:'Чизкейк',en:'Cheesecake'}, desc:{uz:'New York uslubidagi',ru:'В стиле Нью-Йорк',en:'New York style'}, image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&h=400&fit=crop'}, // Cheesecake
 ];
 
 const CATEGORIES = ['all', 'burgers', 'sides', 'drinks', 'combos', 'desserts'];
+
+function productImage(p) {
+  // Agar mahsulotda image mavjud bo'lsa, uni qaytaramiz
+  if (p.image) return p.image;
+  
+  // Fallback: SVG placeholder (avvalgi kod)
+  const colors = {
+    burgers:'#ff6b35', sides:'#ffb703', drinks:'#22d3ee',
+    combos:'#a855f7', desserts:'#ec4899',
+  };
+  const c = colors[p.cat] || '#ff6b35';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-label="${tr(p.name)}">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${c}" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="${c}" stop-opacity=".5"/>
+    </linearGradient></defs>
+    <rect width="320" height="200" fill="url(#g)"/>
+    <circle cx="160" cy="90" r="52" fill="#fff" opacity=".22"/>
+    <circle cx="160" cy="90" r="34" fill="#fff" opacity=".35"/>
+    <text x="160" y="180" text-anchor="middle" font-family="Outfit,sans-serif" font-size="16" fill="#fff" opacity=".9">${tr(p.name)}</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
+
+function productCardHTML(p, opts={}) {
+  const fav = favorites.has(p.id);
+  const badge = p.badge ? `<span class="product-badge">${t('badge_'+p.badge)}</span>` : '';
+  
+  // Rasm elementini tayyorlash
+  const imgHTML = p.image
+    ? `<img src="${p.image}" alt="${tr(p.name)}" width="320" height="200" loading="lazy" decoding="async" class="product-thumb" 
+         onerror="this.style.display='none'; this.parentElement.querySelector('.product-emoji').style.display='grid';">`
+    : `<div class="product-emoji" style="display:grid; place-items:center; font-size:4rem; height:100%;">${p.emoji}</div>`;
+  
+  return `
+  <article class="product-card">
+    <div class="product-img">
+      ${badge}
+      ${opts.showFav !== false ? `
+        <button class="fav-btn ${fav?'active':''}" data-fav="${p.id}" type="button"
+          aria-label="${fav?t('toast_fav_removed'):t('favorite')}" aria-pressed="${fav?'true':'false'}">
+          <span class="heart" aria-hidden="true">${fav?'❤️':'🤍'}</span>
+        </button>` : ''}
+      ${imgHTML}
+      ${p.image ? `<div class="product-emoji" style="display:none; position:absolute; inset:0; place-items:center; font-size:4rem;">${p.emoji}</div>` : ''}
+    </div>
+    <div class="product-body">
+      <h3>${tr(p.name)}</h3>
+      <p class="desc">${tr(p.desc)}</p>
+      <div class="product-footer">
+        <span class="price">${formatPrice(p.price)}</span>
+        ${opts.showRemove
+          ? `<button class="add-btn" data-remove-fav="${p.id}" type="button" style="background:var(--err);font-size:1rem" aria-label="${t('remove')}">✕</button>`
+          : `<button class="add-btn" data-add="${p.id}" type="button" aria-label="${t('add')}">+</button>`}
+      </div>
+    </div>
+  </article>`;
+}
 
 /* =====================================================================
    📦  STATE
@@ -692,6 +752,11 @@ function productCardHTML(p, opts = {}) {
   const showFav = opts.showFav !== false;
   const showRemove = opts.showRemove === true;
   const badgeLabels = { hit: { uz: 'Hit', ru: 'Хит', en: 'Hit' }, new: { uz: 'Yangi', ru: 'Новое', en: 'New' } };
+  const imageHTML = p.image
+    ? `<img src="${p.image}" alt="${tr(p.name)}" width="600" height="400" loading="lazy" decoding="async" class="product-thumb"
+         onerror="this.style.display='none'; this.parentElement.querySelector('.product-emoji').style.display='grid';">
+       <div class="product-emoji" style="display:none; position:absolute; inset:0; place-items:center;" aria-hidden="true">${p.emoji}</div>`
+    : `<div class="product-emoji" style="display:grid; place-items:center; height:100%;" aria-hidden="true">${p.emoji}</div>`;
   return `
     <article class="product-card">
       <div class="product-img">
@@ -701,7 +766,7 @@ function productCardHTML(p, opts = {}) {
             <span class="heart">${isFavorite(p.id) ? '❤️' : '🤍'}</span>
           </button>
         ` : ''}
-        <div class="product-emoji">${p.emoji}</div>
+        ${imageHTML}
       </div>
       <div class="product-body">
         <h3>${tr(p.name)}</h3>
@@ -840,50 +905,45 @@ function initFavorites() {
    📄  PAGE: CART
    ===================================================================== */
 function renderCartPage() {
-  const wrap = $('#cartContent');
-  const empty = $('#cartEmpty');
-  if (!wrap || !empty) return;
+  const wrap = $('#cartContent'), empty = $('#cartEmpty'); if (!wrap||!empty) return;
+  if (cart.count()===0) { wrap.style.display='none'; empty.style.display='block'; return; }
+  wrap.style.display='block'; empty.style.display='none';
 
-  if (cartCount() === 0) {
-    wrap.style.display = 'none';
-    empty.style.display = 'block';
-    return;
-  }
-  wrap.style.display = 'block';
-  empty.style.display = 'none';
-
-  // items
-  const itemsList = $('#cartItemsList');
-  itemsList.innerHTML = Object.entries(state.cart).map(([id, qty]) => {
-    const p = findProduct(id);
-    if (!p) return '';
+  const list = $('#cartItemsList');
+  list.innerHTML = Object.entries(state.cart).map(([id,qty])=>{
+    const p = PRODUCTS.find(x=>x.id===id); if (!p) return '';
+    // Rasm yoki emoji
+    const thumb = p.image
+      ? `<img src="${p.image}" alt="${tr(p.name)}" width="80" height="80" loading="lazy" class="ci-thumb" 
+           onerror="this.style.display='none'; this.parentElement.querySelector('.ci-emoji').style.display='grid';">`
+      : `<div class="ci-emoji" style="display:grid; place-items:center; font-size:2rem; width:80px; height:80px; background:var(--bg-3); border-radius:14px;">${p.emoji}</div>`;
+    
     return `
-      <div class="cart-item">
-        <div class="ci-emoji">${p.emoji}</div>
-        <div class="ci-info">
-          <div class="ci-cat">${t('cat_' + p.cat)}</div>
-          <h4>${tr(p.name)}</h4>
-          <div class="ci-price">${formatPrice(p.price)}</div>
-        </div>
-        <div class="ci-controls">
-          <div class="qty">
-            <button data-qty="-1" data-id="${p.id}" type="button">−</button>
-            <span>${qty}</span>
-            <button data-qty="1" data-id="${p.id}" type="button">+</button>
-          </div>
-          <button class="ci-remove" data-remove="${p.id}" type="button">✕ ${t('toast_removed').toLowerCase()}</button>
-        </div>
+    <div class="cart-item">
+      <div style="position:relative; flex-shrink:0; width:80px; height:80px;">
+        ${thumb}
+        ${p.image ? `<div class="ci-emoji" style="display:none; position:absolute; inset:0; place-items:center; font-size:2rem; width:80px; height:80px; background:var(--bg-3); border-radius:14px;">${p.emoji}</div>` : ''}
       </div>
-    `;
+      <div class="ci-info">
+        <div class="ci-cat">${t('cat_'+p.cat)}</div>
+        <h4>${tr(p.name)}</h4>
+        <div class="ci-price">${formatPrice(p.price)}</div>
+      </div>
+      <div class="ci-controls">
+        <div class="qty">
+          <button data-qty="-1" data-id="${p.id}" type="button" aria-label="−">−</button>
+          <span aria-live="polite">${qty}</span>
+          <button data-qty="1" data-id="${p.id}" type="button" aria-label="+">+</button>
+        </div>
+        <button class="ci-remove" data-remove="${p.id}" type="button" aria-label="${t('remove')}">✕</button>
+      </div>
+    </div>`;
   }).join('');
-
-  $$('[data-qty]', itemsList).forEach(b =>
-    b.addEventListener('click', () => changeQty(b.dataset.id, parseInt(b.dataset.qty))));
-  $$('[data-remove]', itemsList).forEach(b =>
-    b.addEventListener('click', () => removeFromCart(b.dataset.remove)));
+  $$('[data-qty]', list).forEach(b=>b.addEventListener('click',()=>cart.change(b.dataset.id, parseInt(b.dataset.qty))));
+  $$('[data-remove]', list).forEach(b=>b.addEventListener('click',()=>cart.remove(b.dataset.remove)));
 
   renderCartSummary();
-  prefillCheckoutForm();
+  prefillCheckout();
 }
 
 function renderCartSummary() {
